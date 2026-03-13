@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Kaizen Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --yellow: #ffd559;
+      --black: #0d0d0d;
+      --dark: #1a1a1a;
+      --mid: #3a3a3a;
+      --muted: #888;
+      --bg: #f9f7f2;
+      --white: #ffffff;
+      --border: #e5e0d5;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    header {
+      background: var(--black);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    header span {
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    header span em {
+      color: var(--yellow);
+      font-style: normal;
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--black);
+      padding: 72px 40px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 120%, rgba(255,213,89,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-label {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(36px, 6vw, 58px);
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #999;
+      font-size: 15px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* LAYOUT */
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 64px 32px 100px;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--yellow);
+      border-radius: 4px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+
+    .toc-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      padding-left: 18px;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    .toc li { margin-bottom: 6px; }
+
+    .toc a {
+      color: var(--dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .toc a:hover { color: var(--black); text-decoration: underline; }
+
+    /* SECTIONS */
+    .section {
+      margin-bottom: 52px;
+      padding-bottom: 52px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      background: var(--black);
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 2px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      color: var(--black);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--mid);
+      font-size: 15.5px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+      color: var(--mid);
+      font-size: 15.5px;
+    }
+
+    li { margin-bottom: 8px; }
+
+    strong { color: var(--black); font-weight: 600; }
+
+    /* HIGHLIGHT BOX */
+    .highlight {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--yellow);
+      border-radius: 4px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-size: 15px;
+      color: var(--mid);
+    }
+
+    /* WARNING BOX */
+    .warning {
+      background: #fffbee;
+      border: 1px solid #f0dfa0;
+      border-left: 4px solid var(--yellow);
+      border-radius: 4px;
+      padding: 18px 24px;
+      margin: 20px 0;
+      font-size: 15px;
+      color: #5a4e1e;
+    }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: var(--black);
+      border-radius: 6px;
+      padding: 36px 40px;
+      color: var(--white);
+      margin-top: 20px;
+    }
+
+    .contact-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .contact-card p {
+      color: #aaa;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 3px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: opacity 0.15s;
+    }
+
+    .contact-card a:hover { opacity: 0.85; }
+
+    /* FOOTER */
+    footer {
+      background: var(--black);
+      text-align: center;
+      padding: 32px 24px;
+      color: #555;
+      font-size: 13px;
+    }
+
+    footer span { color: var(--yellow); }
+
+    @media (max-width: 600px) {
+      header { padding: 16px 20px; }
+      .hero { padding: 52px 20px 44px; }
+      .page { padding: 44px 20px 72px; }
+      .contact-card { padding: 28px 24px; }
+      .toc ol { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="http://practitioner.kaizenacademy.education/logo_round.png" alt="Kaizen Academy logo" onerror="this.style.display='none'" />
+    <span><em>Kaizen</em> Academy Australia</span>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-label">Legal</div>
+    <h1>Terms of Service</h1>
+    <p>Last updated: March 2026. Please read these terms before using our platform or enrolling in any course.</p>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="page">
+
+    <!-- INTRO -->
+    <div class="highlight">
+      By accessing or using any Kaizen Academy Australia service — including our website, courses, or certificates — you agree to these Terms of Service. If you don't agree, please don't use our platform.
+    </div>
+
+    <!-- TOC -->
+    <div class="toc">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#s1">About Us</a></li>
+        <li><a href="#s2">Eligibility</a></li>
+        <li><a href="#s3">Accounts</a></li>
+        <li><a href="#s4">Enrolment & Access</a></li>
+        <li><a href="#s5">Payments & Refunds</a></li>
+        <li><a href="#s6">Certificates</a></li>
+        <li><a href="#s7">Acceptable Use</a></li>
+        <li><a href="#s8">Intellectual Property</a></li>
+        <li><a href="#s9">Disclaimers</a></li>
+        <li><a href="#s10">Limitation of Liability</a></li>
+        <li><a href="#s11">Termination</a></li>
+        <li><a href="#s12">Changes to These Terms</a></li>
+        <li><a href="#s13">Governing Law</a></li>
+        <li><a href="#s14">Contact Us</a></li>
+      </ol>
+    </div>
+
+    <!-- 01 -->
+    <div class="section" id="s1">
+      <div class="section-number">01</div>
+      <h2>About Us</h2>
+      <p>Kaizen Academy Australia provides online training and certification in continuous improvement, lean methodology, business process management, and related disciplines through our learning platform at <strong>academy.continuousimprovement.education</strong> and associated websites.</p>
+      <p>These Terms of Service ("Terms") govern your use of all our services. "We," "us," and "our" refers to Kaizen Academy Australia. "You" refers to anyone accessing or using our platform.</p>
+    </div>
+
+    <!-- 02 -->
+    <div class="section" id="s2">
+      <div class="section-number">02</div>
+      <h2>Eligibility</h2>
+      <p>Our platform is intended for users aged 18 and over. By using our services, you confirm that you're at least 18 years old and have the legal capacity to enter into a binding agreement.</p>
+      <p>If you're enrolling on behalf of an organisation, you confirm you have the authority to bind that organisation to these Terms.</p>
+    </div>
+
+    <!-- 03 -->
+    <div class="section" id="s3">
+      <div class="section-number">03</div>
+      <h2>Accounts</h2>
+      <p>To access courses, you'll need to create an account. You agree to:</p>
+      <ul>
+        <li>Provide accurate, current information when registering</li>
+        <li>Keep your login credentials confidential</li>
+        <li>Notify us promptly if you suspect unauthorised access to your account</li>
+        <li>Take responsibility for all activity that occurs under your account</li>
+      </ul>
+      <p>Don't share your account with others or allow anyone else to access courses using your login. Each enrolment is for a single individual.</p>
+    </div>
+
+    <!-- 04 -->
+    <div class="section" id="s4">
+      <div class="section-number">04</div>
+      <h2>Enrolment & Course Access</h2>
+      <p>Once you've enrolled and payment is confirmed, you'll receive access to the course materials. Access is granted for personal, non-commercial learning purposes only.</p>
+      <p>Course access is ongoing unless otherwise specified at the time of purchase. We reserve the right to update, modify, or discontinue course content — we'll give reasonable notice where possible, but can't guarantee any specific content will remain available indefinitely.</p>
+      <div class="highlight">
+        Access to course materials does not transfer to any third party and cannot be resold, sublicensed, or shared.
+      </div>
+    </div>
+
+    <!-- 05 -->
+    <div class="section" id="s5">
+      <div class="section-number">05</div>
+      <h2>Payments & Refunds</h2>
+      <p>All prices are listed in Australian Dollars (AUD) unless otherwise stated. Payment is processed securely through our third-party payment provider at the time of enrolment.</p>
+      <p><strong>Refund Policy:</strong> We offer a 30-day refund on courses where you haven't completed more than 20% of the content. To request a refund, contact us within 30 days of purchase. Refunds are not available for completed courses or where a certificate has been issued.</p>
+      <p>Promotional pricing and coupon codes are valid at time of purchase only and cannot be applied retrospectively.</p>
+      <div class="warning">
+        If you experience a technical issue that prevents access to course content, please contact us before requesting a refund — we'll do our best to resolve it first.
+      </div>
+    </div>
+
+    <!-- 06 -->
+    <div class="section" id="s6">
+      <div class="section-number">06</div>
+      <h2>Certificates</h2>
+      <p>Upon successful completion of a course, eligible participants will receive a digital certificate issued by <strong>Kaizen Academy Australia</strong>. Certificates recognise course completion and the learning outcomes demonstrated.</p>
+      <ul>
+        <li>Certificates are issued to the individual named on the account</li>
+        <li>They may not be altered, falsified, or misrepresented</li>
+        <li>We reserve the right to revoke a certificate if it was obtained fraudulently or in breach of these Terms</li>
+      </ul>
+      <p>Our certificates are professional development credentials. They are not accredited qualifications under the Australian Qualifications Framework (AQF) unless explicitly stated.</p>
+    </div>
+
+    <!-- 07 -->
+    <div class="section" id="s7">
+      <div class="section-number">07</div>
+      <h2>Acceptable Use</h2>
+      <p>You agree to use our platform lawfully and respectfully. You must not:</p>
+      <ul>
+        <li>Copy, reproduce, distribute, or resell any course content</li>
+        <li>Screen-record, download, or otherwise capture course videos or materials without written permission</li>
+        <li>Use our content to create competing products or training materials</li>
+        <li>Attempt to reverse-engineer, hack, or disrupt our platform</li>
+        <li>Upload or transmit malicious code, spam, or any harmful content</li>
+        <li>Misrepresent your identity or credentials on our platform</li>
+        <li>Use our platform for any unlawful purpose</li>
+      </ul>
+      <p>Violation of these rules may result in immediate account suspension or termination without refund.</p>
+    </div>
+
+    <!-- 08 -->
+    <div class="section" id="s8">
+      <div class="section-number">08</div>
+      <h2>Intellectual Property</h2>
+      <p>All content on our platform — including course videos, slides, worksheets, templates, graphics, and written materials — is owned by or licensed to Kaizen Academy Australia and protected by Australian and international copyright law.</p>
+      <p>Your enrolment grants you a limited, personal, non-transferable licence to access and use the course materials for your own learning. No ownership or broader rights are transferred.</p>
+      <p>If you'd like to use our content in a corporate training context or for any commercial purpose, please contact us to discuss licensing options.</p>
+    </div>
+
+    <!-- 09 -->
+    <div class="section" id="s9">
+      <div class="section-number">09</div>
+      <h2>Disclaimers</h2>
+      <p>Our courses are provided for educational and professional development purposes. While we work hard to keep content accurate and up to date, we make no warranties — express or implied — about the completeness, accuracy, or fitness for a particular purpose of our materials.</p>
+      <p>Results vary. We don't guarantee any specific outcome, career advancement, or business improvement as a result of completing our courses.</p>
+      <p>Our platform is provided "as is." We don't warrant that the platform will be uninterrupted, error-free, or free from viruses or other harmful components.</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="section" id="s10">
+      <div class="section-number">10</div>
+      <h2>Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, Kaizen Academy Australia's liability for any claim arising from your use of our services is limited to the amount you paid for the course giving rise to the claim.</p>
+      <p>We're not liable for any indirect, incidental, special, or consequential losses — including lost profits, lost data, or business interruption — even if we've been advised of the possibility of such losses.</p>
+      <p>Nothing in these Terms excludes liability for death or personal injury caused by our negligence, fraud, or any liability that cannot be excluded under Australian Consumer Law.</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="section" id="s11">
+      <div class="section-number">11</div>
+      <h2>Termination</h2>
+      <p>We may suspend or terminate your account at any time if you breach these Terms, engage in fraudulent activity, or if continued access poses a risk to others or our platform.</p>
+      <p>You may close your account at any time by contacting us. Termination doesn't entitle you to a refund unless you meet the criteria in Section 5.</p>
+      <p>Sections relating to intellectual property, disclaimers, limitation of liability, and governing law survive termination.</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="section" id="s12">
+      <div class="section-number">12</div>
+      <h2>Changes to These Terms</h2>
+      <p>We may update these Terms from time to time. The "last updated" date at the top of this page will reflect any changes. For significant updates, we'll notify you by email or through a notice on the platform.</p>
+      <p>Continuing to use our services after updated Terms take effect constitutes your acceptance of those changes.</p>
+    </div>
+
+    <!-- 13 -->
+    <div class="section" id="s13">
+      <div class="section-number">13</div>
+      <h2>Governing Law</h2>
+      <p>These Terms are governed by the laws of Australia. Any disputes arising from your use of our platform are subject to the exclusive jurisdiction of the courts of Australia.</p>
+      <p>Our services are also subject to the Australian Consumer Law (Competition and Consumer Act 2010), which provides certain guarantees that these Terms don't override.</p>
+    </div>
+
+    <!-- 14 -->
+    <div class="section" id="s14">
+      <div class="section-number">14</div>
+      <h2>Contact Us</h2>
+      <p>Questions about these Terms? Want to report a concern or discuss a licensing arrangement? Get in touch.</p>
+      <div class="contact-card">
+        <h3>Get in Touch</h3>
+        <p>Reach out via LinkedIn and we'll get back to you as quickly as we can.</p>
+        <a href="https://www.linkedin.com/company/theciacademy" target="_blank" rel="noopener">Message Us on LinkedIn →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 <span>Kaizen Academy Australia</span>. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
