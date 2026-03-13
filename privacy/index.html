@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Kaizen Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --yellow: #ffd559;
+      --black: #0d0d0d;
+      --dark: #1a1a1a;
+      --mid: #3a3a3a;
+      --muted: #888;
+      --bg: #f9f7f2;
+      --white: #ffffff;
+      --border: #e5e0d5;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    header {
+      background: var(--black);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    header span {
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    header span em {
+      color: var(--yellow);
+      font-style: normal;
+    }
+
+    /* HERO STRIP */
+    .hero {
+      background: var(--black);
+      padding: 72px 40px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 120%, rgba(255,213,89,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-label {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(36px, 6vw, 58px);
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #999;
+      font-size: 15px;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    /* LAYOUT */
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 64px 32px 100px;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--yellow);
+      border-radius: 4px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+
+    .toc-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      padding-left: 18px;
+    }
+
+    .toc li {
+      margin-bottom: 6px;
+    }
+
+    .toc a {
+      color: var(--dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .toc a:hover { color: var(--black); text-decoration: underline; }
+
+    /* SECTIONS */
+    .section {
+      margin-bottom: 52px;
+      padding-bottom: 52px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      background: var(--black);
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 2px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      color: var(--black);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--mid);
+      font-size: 15.5px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+      color: var(--mid);
+      font-size: 15.5px;
+    }
+
+    li { margin-bottom: 8px; }
+
+    strong { color: var(--black); font-weight: 600; }
+
+    /* HIGHLIGHT BOX */
+    .highlight {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--yellow);
+      border-radius: 4px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-size: 15px;
+      color: var(--mid);
+    }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: var(--black);
+      border-radius: 6px;
+      padding: 36px 40px;
+      color: var(--white);
+      margin-top: 20px;
+    }
+
+    .contact-card h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .contact-card p {
+      color: #aaa;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 3px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: opacity 0.15s;
+    }
+
+    .contact-card a:hover { opacity: 0.85; }
+
+    /* FOOTER */
+    footer {
+      background: var(--black);
+      text-align: center;
+      padding: 32px 24px;
+      color: #555;
+      font-size: 13px;
+    }
+
+    footer span { color: var(--yellow); }
+
+    @media (max-width: 600px) {
+      header { padding: 16px 20px; }
+      .hero { padding: 52px 20px 44px; }
+      .page { padding: 44px 20px 72px; }
+      .contact-card { padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="http://practitioner.kaizenacademy.education/logo_round.png" alt="Kaizen Academy logo" onerror="this.style.display='none'" />
+    <span><em>Kaizen</em> Academy Australia</span>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-label">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p>Last updated: March 2026. How we collect, use, and protect your information.</p>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="page">
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#s1">Who We Are</a></li>
+        <li><a href="#s2">Information We Collect</a></li>
+        <li><a href="#s3">How We Use Your Information</a></li>
+        <li><a href="#s4">Sharing Your Information</a></li>
+        <li><a href="#s5">Cookies & Tracking</a></li>
+        <li><a href="#s6">Data Retention</a></li>
+        <li><a href="#s7">Your Rights</a></li>
+        <li><a href="#s8">Security</a></li>
+        <li><a href="#s9">Third-Party Links</a></li>
+        <li><a href="#s10">Changes to This Policy</a></li>
+        <li><a href="#s11">Contact Us</a></li>
+      </ol>
+    </div>
+
+    <!-- INTRO -->
+    <div class="section" id="s1">
+      <div class="section-number">01</div>
+      <h2>Who We Are</h2>
+      <p>Kaizen Academy Australia operates the online learning platform at <strong>academy.continuousimprovement.education</strong> and related websites. We provide continuous improvement, lean, and business process training to individuals and organisations worldwide.</p>
+      <p>When you use our services, you're trusting us with information about yourself. We take that seriously. This policy explains what we collect, why, and what your rights are.</p>
+    </div>
+
+    <!-- COLLECTION -->
+    <div class="section" id="s2">
+      <div class="section-number">02</div>
+      <h2>Information We Collect</h2>
+      <p>We only collect what we actually need. That includes:</p>
+      <ul>
+        <li><strong>Account information</strong> — name, email address, and password when you register for a course or create an account.</li>
+        <li><strong>Payment information</strong> — billing details processed securely through our payment provider. We don't store full card numbers.</li>
+        <li><strong>Course activity</strong> — progress, quiz results, and completion records so we can issue certificates and track your learning.</li>
+        <li><strong>Communications</strong> — messages you send to us, survey responses, and support requests.</li>
+        <li><strong>Technical data</strong> — IP address, browser type, device information, and usage patterns collected automatically when you visit our site.</li>
+      </ul>
+      <div class="highlight">
+        We don't collect sensitive categories of personal data (such as health information, ethnicity, or political views) through our platform.
+      </div>
+    </div>
+
+    <!-- USE -->
+    <div class="section" id="s3">
+      <div class="section-number">03</div>
+      <h2>How We Use Your Information</h2>
+      <p>Your information is used to:</p>
+      <ul>
+        <li>Deliver courses and issue completion certificates</li>
+        <li>Process payments and send receipts</li>
+        <li>Send course updates, new releases, and promotional offers (you can unsubscribe any time)</li>
+        <li>Respond to support requests</li>
+        <li>Improve our platform and understand how learners use it</li>
+        <li>Meet legal and compliance obligations</li>
+      </ul>
+      <p>We don't use your data for automated decision-making that produces legal or similarly significant effects on you.</p>
+    </div>
+
+    <!-- SHARING -->
+    <div class="section" id="s4">
+      <div class="section-number">04</div>
+      <h2>Sharing Your Information</h2>
+      <p>We don't sell your personal information. We may share data with trusted third parties who help us run the platform — including our learning management system provider, payment processor, and email service provider. All are contractually required to handle your data securely and only for the purpose we've specified.</p>
+      <p>We may also disclose information if required by law, or to protect the rights, safety, or property of Kaizen Academy Australia or others.</p>
+    </div>
+
+    <!-- COOKIES -->
+    <div class="section" id="s5">
+      <div class="section-number">05</div>
+      <h2>Cookies & Tracking</h2>
+      <p>Our platform uses cookies to keep you logged in, remember your preferences, and understand how people use the site. We may also use analytics tools (such as Google Analytics) that set their own cookies.</p>
+      <p>You can control cookies through your browser settings. Disabling them may affect some functionality — particularly logging in and saving your course progress.</p>
+    </div>
+
+    <!-- RETENTION -->
+    <div class="section" id="s6">
+      <div class="section-number">06</div>
+      <h2>Data Retention</h2>
+      <p>We keep your account and course data for as long as your account is active, or as needed to provide services. If you request deletion, we'll remove your personal data within a reasonable timeframe, unless we're required to retain it for legal or compliance purposes (such as financial records).</p>
+      <p>Completion records may be retained longer to support certificate verification.</p>
+    </div>
+
+    <!-- RIGHTS -->
+    <div class="section" id="s7">
+      <div class="section-number">07</div>
+      <h2>Your Rights</h2>
+      <p>Depending on where you're located, you may have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> the personal data we hold about you</li>
+        <li><strong>Correct</strong> inaccurate or incomplete data</li>
+        <li><strong>Request deletion</strong> of your personal data</li>
+        <li><strong>Opt out</strong> of marketing communications</li>
+        <li><strong>Data portability</strong> — receive a copy of your data in a common format</li>
+        <li><strong>Object</strong> to certain types of processing</li>
+      </ul>
+      <p>To exercise any of these rights, get in touch using the contact details below. We'll respond within 30 days.</p>
+    </div>
+
+    <!-- SECURITY -->
+    <div class="section" id="s8">
+      <div class="section-number">08</div>
+      <h2>Security</h2>
+      <p>We use industry-standard measures to protect your data — including encrypted connections (HTTPS), secure payment processing, and access controls. No method of transmission over the internet is 100% secure, but we take reasonable precautions to protect your information.</p>
+      <p>If you suspect unauthorised access to your account, please contact us immediately.</p>
+    </div>
+
+    <!-- THIRD PARTY -->
+    <div class="section" id="s9">
+      <div class="section-number">09</div>
+      <h2>Third-Party Links</h2>
+      <p>Our platform may contain links to external websites. We're not responsible for the privacy practices of those sites and recommend reviewing their policies separately.</p>
+    </div>
+
+    <!-- CHANGES -->
+    <div class="section" id="s10">
+      <div class="section-number">10</div>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this policy from time to time. When we do, we'll revise the "last updated" date at the top of the page. For significant changes, we'll notify you by email or through a notice on the platform.</p>
+      <p>Continuing to use our services after changes take effect means you accept the updated policy.</p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="section" id="s11">
+      <div class="section-number">11</div>
+      <h2>Contact Us</h2>
+      <p>Questions about this policy or how we handle your data? We're happy to help.</p>
+      <div class="contact-card">
+        <h3>Get in Touch</h3>
+        <p>Reach out via LinkedIn and we'll respond as quickly as we can.</p>
+        <a href="https://www.linkedin.com/company/theciacademy" target="_blank" rel="noopener">Message Us on LinkedIn →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 <span>Kaizen Academy Australia</span>. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
