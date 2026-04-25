@@ -347,6 +347,26 @@
         .testimonial-author { font-weight: 700; color: var(--dark); margin-bottom: 4px; }
         .testimonial-title { font-size: 14px; color: #666; }
 
+        /* ── TEACHABLE EMBED SECTION ── */
+        .teachable-section {
+            padding: 100px 20px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .teachable-container {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .teachable-container .section-title {
+            margin-bottom: 60px;
+        }
+
         /* ── FINAL CTA ── */
         .final-cta { padding: 120px 20px; background: var(--dark); color: var(--white); text-align: center; position: relative; overflow: hidden; }
         .final-cta::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,213,89,0.1) 0%, transparent 70%); animation: pulse 8s ease-in-out infinite; }
@@ -603,7 +623,7 @@
         <div class="container">
             <h2 class="section-title" style="color: white;">Your Expert Instructor</h2>
             <div class="coach-content">
-                <div class="coach-image-placeholder">Ahmed<br>Radwan</div>
+                <img src="https://firebasestorage.googleapis.com/v0/b/image-upload-ka.firebasestorage.app/o/Default%2Fprofile-pic10.png?alt=media&token=2f5c5060-7eb3-40b6-8e13-a4fffc2042d2" alt="Ahmed Radwan" style="width: 100%; max-width: 300px; border-radius: 8px; box-shadow: 0 8px 40px rgba(0,0,0,0.3); object-fit: cover; aspect-ratio: 1;" />
                 <div class="coach-bio">
                     <h3>Ahmed Radwan</h3>
                     <p>Leading the Continuous Improvement Academy is Ahmed Radwan, a seasoned professional with over 15 years of experience in lean manufacturing and operational excellence.</p>
@@ -655,6 +675,50 @@
             <div style="text-align: center; margin-top: 60px;">
                 <p style="font-size: 24px; font-weight: 700; color: var(--dark);">Join 5,000+ professionals already driving change</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Teachable Embed Section -->
+    <section class="teachable-section">
+        <div class="teachable-container">
+            <h2 class="section-title">Ready to Get Started?</h2>
+            
+            <!-- Teachable embed code -->
+            <div class="teachable-embed-bundle-672657" style="color: rgb(54, 65, 77); width: 100%; max-width: 488px; border-radius: 8px; border: 1px solid rgb(228, 228, 228); background-color: rgb(255, 255, 255); padding-bottom: 16px; word-break: break-word; margin: 0 auto;">
+                <img src="https://uploads.teachablecdn.com/attachments/96276506ae254dcdaeae348106a7750c.png" alt="Certified Lean Practitioner Program" style="object-fit: cover; width: 100%; height: 274.5px; border-radius: 8px 8px 0px 0px;">
+                <h1 style="font-weight: 400; font-size: 32px; font-style: normal; font-family: Raleway; padding: 16px 16px 0px;">Certified Lean Practitioner Program</h1>
+                <p style="font-weight: 400; font-size: 16px; font-style: normal; font-family: sans-serif; padding: unset; line-height: 150%;"></p>
+                <form>
+                    <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 16px; border-radius: 0px; margin: 16px; border: 1px solid rgb(167, 167, 167);">
+                        <label for="pricing-plan-6401256" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-family: sans-serif; font-weight: 400; font-size: 16px; font-style: normal; color: rgb(54, 65, 77); max-width: calc(80%);">
+                            <input class="teachable-pricing-plan-bundle-672657" id="pricing-plan-6401256" name="pricing-plan" type="radio" data-plan-type="One-Time Purchase" value="https://academy.continuousimprovement.education/purchase?product_id=6401256&user_src=embed_buy_button&embed=true" style="margin-right: 16px; accent-color: rgb(0, 0, 0);">
+                            <span style="white-space: nowrap; text-overflow: ellipsis; padding-right: 8px;">One-Time Purchase</span>
+                        </label>
+                        <span style="font-family: Raleway; text-align: end;">$995</span>
+                    </div>
+                    <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 16px; border-radius: 0px; margin: 16px; border: 1px solid rgb(228, 228, 228);">
+                        <label for="pricing-plan-6401258" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-family: sans-serif; font-weight: 400; font-size: 16px; font-style: normal; color: rgb(54, 65, 77); max-width: calc(80%);">
+                            <input class="teachable-pricing-plan-bundle-672657" id="pricing-plan-6401258" name="pricing-plan" type="radio" data-plan-type="Payment Plan" value="https://academy.continuousimprovement.education/purchase?product_id=6401258&user_src=embed_buy_button&embed=true" style="margin-right: 16px; accent-color: rgb(0, 0, 0);">
+                            <span style="white-space: nowrap; text-overflow: ellipsis; padding-right: 8px;">Payment Plan</span>
+                        </label>
+                        <span style="font-family: Raleway; text-align: end;">5 payments of $220/month</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column-reverse; margin: 16px;">
+                        <button class="teachable-buy-button-bundle-672657" type="button" style="border: 1px solid rgb(0, 0, 0); border-radius: 0px; background-color: rgb(0, 0, 0); padding: 16px; font-family: sans-serif; font-weight: 600; font-size: 16px; font-style: normal; color: rgb(255, 255, 255); cursor: pointer;">Get Certified</button>
+                    </div>
+                </form>
+            </div>
+            <style>
+                .teachable-embed-bundle-672657 { width: 100% !important; max-width: 488px !important; }
+            </style>
+            <script>
+                function handleCloseModal(event) { event.target.closest('.t-modal').classList.remove('open'); document.body.classList.remove('t-modal-open'); }
+                function handleTeachableBuyButtonClick(event) { event.target.closest('.teachable-embed-bundle-672657').querySelectorAll('input.teachable-pricing-plan-bundle-672657').forEach((radio) => { if (radio.checked) { const isNotFree = radio.getAttribute('data-plan-type')?.toLowerCase() != 'free'; if (isNotFree && false) { const modal = event.target.closest('.teachable-embed-bundle-672657').querySelector('.t-modal'); const iframe = modal.querySelector('iframe'); if (iframe.src !== radio.value) { modal.classList.add('loading'); iframe.src = radio.value; } modal.classList.add('open'); document.body.classList.add('t-modal-open'); } else { window.location.href = radio.value; } } }); }
+                function handleParentPricingPlanClick(event) { const parentDiv = event.currentTarget.closest('.teachable-embed-bundle-672657'); const divs = Array.from(parentDiv.querySelectorAll('div')).filter(div => { return div.querySelector('label') && div.querySelector('input'); }); divs.forEach(div => { div.style.borderColor = '#E4E4E4'; }); const div = event.currentTarget; const radioButton = div.querySelector('input[type="radio"]'); if (radioButton) { radioButton.click(); div.style.borderColor = '#A7A7A7'; } }
+                document.querySelectorAll('.teachable-pricing-plan-bundle-672657').forEach((radio, index) => { const label = radio.closest('label'); const id = radio.getAttribute('id'); if (!id.includes('-index-')) { const indexedId = id + '-index-' + index; label.setAttribute('for', indexedId); radio.setAttribute('id', indexedId); } const divEl = label.closest("div"); divEl.addEventListener("click", handleParentPricingPlanClick); });
+                document.querySelectorAll('.teachable-buy-button-bundle-672657').forEach((button) => { button.addEventListener('click', handleTeachableBuyButtonClick); });
+                if (false) { document.querySelectorAll('.t-modal-close').forEach((button) => { button.addEventListener('click', handleCloseModal); }); window.addEventListener('message', (event) => { if (event.data.message === 'checkout_loaded') { document.querySelector('.t-modal.open').classList.remove('loading'); } else if (event.data.message === 'redirect') { window.location.replace(event.data.redirectUrl); } }); }
+            </script>
         </div>
     </section>
 
