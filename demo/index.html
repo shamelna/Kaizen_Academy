@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Free Demo - Certified Lean Practitioner Program | Kaizen Academy</title>
+    <link rel="icon" type="image/x-icon" href="http://practitioner.kaizenacademy.education/Tcia.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+    <style>
+        :root {
+            --primary-yellow: #ffd559;
+            --dark: #1a1a1a;
+            --grey: #2a2a2a;
+            --light-grey: #f5f5f5;
+            --white: #ffffff;
+            --charcoal: #36414d;
+            --accent: #ff6b35;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: var(--white);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ── HEADER ── */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .logo-link:hover {
+            opacity: 0.85;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .header-nav a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .header-nav a:hover {
+            color: var(--primary-yellow);
+        }
+
+        /* ── HERO SECTION ── */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--grey) 100%);
+            color: var(--white);
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(255,213,89,0.03) 50px, rgba(255,213,89,0.03) 51px);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--primary-yellow);
+            color: var(--dark);
+            padding: 10px 28px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(255,213,89,0.3);
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(42px, 8vw, 64px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        h1 span {
+            color: var(--primary-yellow);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(16px, 2.5vw, 20px);
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+            line-height: 1.7;
+        }
+
+        /* ── MAIN CONTENT ── */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+
+        .demo-info h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 42px;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+            color: var(--dark);
+        }
+
+        .demo-info p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* ── BENEFIT LIST ── */
+        .benefit-list {
+            background: var(--light-grey);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+
+        .benefit-list h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--dark);
+            letter-spacing: 1px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 16px;
+            gap: 12px;
+        }
+
+        .benefit-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .checkmark {
+            color: var(--primary-yellow);
+            font-weight: 700;
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .benefit-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* ── CALENDLY SECTION ── */
+        .calendly-wrapper {
+            background: var(--white);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 30px;
+        }
+
+        .calendly-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .calendly-header h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            color: var(--dark);
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .calendly-header p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .calendly-inline-widget {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* ── FEATURES SECTION ── */
+        .features {
+            padding: 100px 20px;
+            background: var(--light-grey);
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--dark);
+            position: relative;
+            letter-spacing: 1px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .features h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary-yellow);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-left: 6px solid var(--primary-yellow);
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: var(--dark);
+            letter-spacing: 1px;
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* ── INSTRUCTOR SECTION ── */
+        .instructor {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--grey) 0%, var(--dark) 100%);
+            color: var(--white);
+        }
+
+        .instructor-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .instructor-image {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+            object-fit: cover;
+        }
+
+        .instructor-bio h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 36px;
+            color: var(--primary-yellow);
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .instructor-bio p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .instructor-creds {
+            list-style: none;
+            margin-top: 24px;
+        }
+
+        .instructor-creds li {
+            padding: 10px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .instructor-creds li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-yellow);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--grey);
+            color: var(--white);
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            color: var(--primary-yellow);
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-yellow);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 13px;
+        }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            header {
+                padding: 16px;
+            }
+
+            .header-nav {
+                gap: 16px;
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 60px 20px 40px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .main-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+
+            .demo-info h2 {
+                font-size: 32px;
+            }
+
+            .calendly-wrapper {
+                padding: 20px;
+            }
+
+            .features-grid,
+            .instructor-container {
+                grid-template-columns: 1fr;
+            }
+
+            .instructor-image {
+                max-width: 100%;
+            }
+
+            .instructor-bio h3 {
+                font-size: 28px;
+            }
+
+            .features h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── HEADER ── -->
+    <header>
+        <div class="header-container">
+            <a href="https://www.continuousimprovement.education" class="logo-link" title="Kaizen Academy">
+                <img src="http://practitioner.kaizenacademy.education/logo_round.png" alt="Kaizen Academy" class="logo">
+            </a>
+            <nav class="header-nav">
+                <a href="https://academy.continuousimprovement.education/p/certified-lean-practitioner-training-bundle">View Program</a>
+                <a href="https://www.continuousimprovement.education">Website</a>
+                <a href="mailto:learn@continuousimprovement.education">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Book Your Free Demo</div>
+            <h1>Discover the <span>Certified Lean Practitioner</span> Program</h1>
+            <p class="hero-subtitle">See exactly what you'll learn and how it transforms your career. Chat directly with Ahmed, our Master Black Belt instructor, about your goals.</p>
+        </div>
+    </section>
+
+    <!-- ── MAIN CONTENT ── -->
+    <section>
+        <div class="main-container">
+            <!-- Left side: Info -->
+            <div class="demo-info">
+                <h2>What to Expect</h2>
+                <p>During your 30-minute demo call, you'll:</p>
+
+                <div class="benefit-list">
+                    <h3>On Your Call</h3>
+                    <div class="benefit-item">
+                        <span class="checkmark">✓</span>
+                        <span class="benefit-text">Learn the exact modules and timeline covered in the certification</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="checkmark">✓</span>
+                        <span class="benefit-text">Discover how you'll apply Lean principles to real business problems</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="checkmark">✓</span>
+                        <span class="benefit-text">Understand the coaching support included with your enrollment</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="checkmark">✓</span>
+                        <span class="benefit-text">Explore how the certification advances your career</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="checkmark">✓</span>
+                        <span class="benefit-text">Get exclusive insights and answer all your questions</span>
+                    </div>
+                </div>
+
+                <p style="margin-top: 30px; font-weight: 500; color: var(--dark);">No sales pressure—just candid conversation with someone who knows Lean inside and out.</p>
+
+                <p style="margin-top: 24px; font-size: 14px; color: #888;">📍 <strong>Format:</strong> One-to-one video call via Zoom</p>
+                <p style="font-size: 14px; color: #888;">⏱️ <strong>Duration:</strong> 30 minutes</p>
+            </div>
+
+            <!-- Right side: Calendly -->
+            <div class="calendly-wrapper">
+                <div class="calendly-header">
+                    <h3>Pick Your Time</h3>
+                    <p>Select a time that works for you. You'll receive a Zoom link via email.</p>
+                </div>
+                <!-- Calendly inline widget -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/learn-continuousimprovement/lean-practitioner-certification-demo?text_color=36414d&primary_color=000000" style="min-width:320px;height:700px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FEATURES ── -->
+    <section class="features">
+        <div class="features-container">
+            <h2>Why You'll Love This Program</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3>Practical Skills</h3>
+                    <p>Master tools you'll use immediately—Value Stream Mapping, A3 Problem Solving, the 7 Quality Control tools.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🤝</span>
+                    <h3>Expert Guidance</h3>
+                    <p>Learn from Ahmed Radwan, a Master Black Belt with 15+ years of hands-on experience across industries.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💼</span>
+                    <h3>Real-World Projects</h3>
+                    <p>Apply learning to actual business improvement projects with one-to-one coaching throughout.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🏆</span>
+                    <h3>Industry Credential</h3>
+                    <p>Earn a respected Lean Practitioner Certificate from Kaizen Academy Australia that employers value.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">♾️</span>
+                    <h3>Lifetime Access</h3>
+                    <p>Self-paced learning, ongoing support, and a thriving community of continuous improvement professionals.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🚀</span>
+                    <h3>Career Advancement</h3>
+                    <p>Stand out in the job market. Lean skills are in high demand across every industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── INSTRUCTOR ── -->
+    <section class="instructor">
+        <div class="instructor-container">
+            <img src="https://firebasestorage.googleapis.com/v0/b/image-upload-ka.firebasestorage.app/o/Default%2Fprofile-pic10.png?alt=media&token=2f5c5060-7eb3-40b6-8e13-a4fffc2042d2" alt="Ahmed Radwan" class="instructor-image" style="border-radius: 50%; object-position: center top;">
+            <div class="instructor-bio">
+                <h3>Ahmed Radwan</h3>
+                <p>Your instructor brings over 15 years of hands-on experience in Lean manufacturing and operational excellence across diverse industries—from manufacturing and healthcare to finance and services.</p>
+                <p>Ahmed is a certified Master Black Belt and has trained 5,000+ professionals worldwide. He's collaborated with leading thought leaders including Dr. Jeffrey Liker (author of The Toyota Way) and has built a thriving community of continuous improvement professionals on LinkedIn.</p>
+                <ul class="instructor-creds">
+                    <li>Certified Lean Six Sigma Master Black Belt</li>
+                    <li>Certified Lean Bronze (Shingo Institute)</li>
+                    <li>Certified Lean Six Sigma Black Belt (IASSC)</li>
+                    <li>Certified Professional Scrum Master</li>
+                    <li>Hoshin Kanri Practitioner (Lean Enterprise Institute)</li>
+                    <li>Project Management Professional (PMI)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Kaizen Academy</h4>
+                <p>Empowering people, driving excellence, always improving.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📧 learn@continuousimprovement.education</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="https://academy.continuousimprovement.education/p/certified-lean-practitioner-training-bundle">Full Program</a>
+                <a href="https://www.continuousimprovement.education">Main Website</a>
+                <a href="https://www.linkedin.com/company/theciacademy">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kaizen Academy Pty Ltd | Licensed under CC BY-NC-ND 4.0</p>
+        </div>
+    </footer>
+
+</body>
+</html>
